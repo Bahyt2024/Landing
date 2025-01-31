@@ -1,0 +1,121 @@
+.header {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Лого */
+.logo {
+    height: 80px;
+}
+
+/* Ссылки в меню */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+}
+
+/* Правая секция (меню-кнопка и регистрация) */
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Кнопка регистрации */
+.register-button {
+    display: flex;
+    align-items: center;
+}
+
+/* Кнопка */
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Кнопка меню */
+.menu-button {
+    display: none;
+    background-color: transparent;
+    color: black;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+/* 📱 Адаптивная верстка */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: right;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    /* Показываем кнопку меню справа */
+    .menu-button {
+        display: block;
+    }
+
+    /* Убираем кнопку регистрации */
+    .register-button {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 8px 15px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+}

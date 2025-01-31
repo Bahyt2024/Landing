@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html, body {
+    height: 100%; /* Обеспечиваем, чтобы страница занимала всю высоту */
+}
+
+main {
+    padding-top: 100px; /* Для того чтобы контент не перекрывался фиксированным хедером */
+}

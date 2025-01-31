@@ -1,0 +1,61 @@
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 50px;
+
+    bottom: 0;
+    width: 100%; /* Футер по всей ширине экрана */
+    left: 0;
+    display: flex;
+    justify-content: center; /* Центрируем содержимое футера */
+}
+
+.footer .footer-content {
+    width: 80%; /* Ограничиваем ширину на 80% */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .company-name p {
+    margin: 0;
+}
+
+.footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .footer .footer-content {
+        flex-direction: column; /* Элементы футера размещаются вертикально */
+        align-items: center; /* Центрируем элементы */
+        text-align: center;
+    }
+
+    .footer .footer-links {
+        margin-top: 15px; /* Добавляем отступ сверху */
+    }
+
+    .footer .footer-links a {
+        margin: 10px 0; /* Уменьшаем горизонтальные отступы и добавляем вертикальные */
+    }
+}
+
+/* Для еще меньших экранов (например, смартфоны в портретном режиме) */
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px 20px; /* Уменьшаем паддинг для компактных экранов */
+    }
+
+    .footer .footer-links a {
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+}
