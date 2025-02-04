@@ -41,7 +41,9 @@
     }
 
     .footer .footer-links {
-        margin-top: 15px; /* Добавляем отступ сверху */
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column; /* Добавляем отступ сверху */
     }
 
     .footer .footer-links a {

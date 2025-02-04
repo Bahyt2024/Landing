@@ -1,8 +1,9 @@
 import { useState } from "react";
+import InputMask from "react-input-mask";
 import "./Register.css";
 
-const reg = () => {
-    const [form, setForm] = useState({ username: "", email: "", password: "" });
+const req = () => {
+    const [form, setForm] = useState({ username: "", phone: "", password: "" });
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -17,19 +18,14 @@ const reg = () => {
         <div className="register">
             <h2>Create an Account</h2>
             <form onSubmit={handleSubmit}>
-                <input
+
+                <InputMask
+                    mask="+7 (999) 999-99-99"
+                    maskChar="_"
                     type="text"
-                    name="username"
-                    placeholder="Username"
-                    value={form.username}
-                    onChange={handleChange}
-                    required
-                />
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    value={form.email}
+                    name="phone"
+                    placeholder="Phone Number"
+                    value={form.phone}
                     onChange={handleChange}
                     required
                 />
@@ -47,4 +43,4 @@ const reg = () => {
     );
 };
 
-export default reg;
+export default req;
